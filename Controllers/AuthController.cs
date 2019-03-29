@@ -53,14 +53,6 @@ namespace FiralApiReal.Controllers
         public async Task<IActionResult> Login(UserForLoginDto userForLogin)
         {
 
-            // unhandled exceptions are not good. we didnt do anythign to handle it
-            // line of code to refer to exception
-            // raw exception details
-            // this isnt something we'd send to end user
-            // not to end client either
-            // no cors?
-            // really misleading
-            throw new Exception("Computer really says no");
 
             var userFromRepo = await _repo.Login(userForLogin.Username.ToLower(), userForLogin.Password);
 
